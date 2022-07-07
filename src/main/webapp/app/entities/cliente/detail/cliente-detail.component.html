@@ -1,0 +1,64 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="cliente">
+      <h2 data-cy="clienteDetailsHeading"><span jhiTranslate="concesionarioApp.cliente.detail.title">Cliente</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ cliente.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="concesionarioApp.cliente.nombre">Nombre</span></dt>
+        <dd>
+          <span>{{ cliente.nombre }}</span>
+        </dd>
+        <dt><span jhiTranslate="concesionarioApp.cliente.primerApellido">Primer Apellido</span></dt>
+        <dd>
+          <span>{{ cliente.primerApellido }}</span>
+        </dd>
+        <dt><span jhiTranslate="concesionarioApp.cliente.segundoApellido">Segundo Apellido</span></dt>
+        <dd>
+          <span>{{ cliente.segundoApellido }}</span>
+        </dd>
+        <dt><span jhiTranslate="concesionarioApp.cliente.tipoIdentificacion">Tipo Identificacion</span></dt>
+        <dd>
+          <span>{{ cliente.tipoIdentificacion }}</span>
+        </dd>
+        <dt><span jhiTranslate="concesionarioApp.cliente.numIdentificacion">Num Identificacion</span></dt>
+        <dd>
+          <span>{{ cliente.numIdentificacion }}</span>
+        </dd>
+        <dt><span jhiTranslate="concesionarioApp.cliente.telefono">Telefono</span></dt>
+        <dd>
+          <span>{{ cliente.telefono }}</span>
+        </dd>
+        <dt><span jhiTranslate="concesionarioApp.cliente.mail">Mail</span></dt>
+        <dd>
+          <span>{{ cliente.mail }}</span>
+        </dd>
+        <dt><span jhiTranslate="concesionarioApp.cliente.direccion">Direccion</span></dt>
+        <dd>
+          <span>{{ cliente.direccion }}</span>
+        </dd>
+        <dt><span jhiTranslate="concesionarioApp.cliente.ocupacion">Ocupacion</span></dt>
+        <dd>
+          <span>{{ cliente.ocupacion }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/cliente', cliente.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

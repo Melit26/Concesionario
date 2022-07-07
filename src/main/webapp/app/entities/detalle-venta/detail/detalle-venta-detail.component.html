@@ -1,0 +1,44 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="detalleVenta">
+      <h2 data-cy="detalleVentaDetailsHeading"><span jhiTranslate="concesionarioApp.detalleVenta.detail.title">Detalle Venta</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ detalleVenta.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="concesionarioApp.detalleVenta.descuento">Descuento</span></dt>
+        <dd>
+          <span>{{ detalleVenta.descuento }}</span>
+        </dd>
+        <dt><span jhiTranslate="concesionarioApp.detalleVenta.venta">Venta</span></dt>
+        <dd>
+          <div *ngIf="detalleVenta.venta">
+            <a [routerLink]="['/venta', detalleVenta.venta?.id, 'view']">{{ detalleVenta.venta?.id }}</a>
+          </div>
+        </dd>
+        <dt><span jhiTranslate="concesionarioApp.detalleVenta.coche">Coche</span></dt>
+        <dd>
+          <div *ngIf="detalleVenta.coche">
+            <a [routerLink]="['/coche', detalleVenta.coche?.id, 'view']">{{ detalleVenta.coche?.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/detalle-venta', detalleVenta.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

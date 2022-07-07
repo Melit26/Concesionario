@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+    <!--
+        Added the constraints for entity DetalleVenta.
+    -->
+    <changeSet id="20220705155526" author="melit">
+
+        <addForeignKeyConstraint baseColumnNames="coche_id"
+                                 baseTableName="detalle_venta"
+                                 constraintName="fk_detalle_venta__coche_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="coche"/>
+    </changeSet>
+</databaseChangeLog>

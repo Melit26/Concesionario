@@ -1,0 +1,44 @@
+{
+  "changelogDate": "20220701080917",
+  "dto": "no",
+  "fields": [
+    {
+      "fieldName": "idVenta",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "idCliente",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "descuento",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "jpaMetamodelFiltering": false,
+  "name": "DetalleVenta",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "id",
+      "otherEntityName": "venta",
+      "relationshipName": "venta",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": ["required"]
+    },
+    {
+      "id": false,
+      "otherEntityField": "id",
+      "otherEntityName": "coche",
+      "otherEntityRelationshipName": "detalleVenta",
+      "ownerSide": true,
+      "relationshipName": "coche",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "service": "serviceClass"
+}
