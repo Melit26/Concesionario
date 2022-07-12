@@ -9,12 +9,12 @@
     <!--
         Added the entity DetalleVenta.
     -->
-    <changeSet id="20220705172826" author="celesteandmaria">
+    <changeSet id="20220705151226" author="melit">
         <addColumn tableName="detalle_venta">
-            <column name="venta_id" type="bigint">
-                <constraints nullable="false" />
+            <column name="coche_id" type="bigint">
+                <constraints nullable="true" unique="true" uniqueConstraintName="ux_detalle_venta__coche_id" />
             </column>
-            <!-- jhipster-needle-li20220705134700_modified_entity_Venta_added_column_venedorquibase-add-column - JHipster will add columns here -->
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
         </addColumn>
     </changeSet>
 </databaseChangeLog>

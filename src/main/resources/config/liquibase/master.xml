@@ -22,7 +22,7 @@
     <include file="config/liquibase/changelog/20220701081710_added_entity_Venta.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20220705134700_modified_entity_Venta_added_column_vendedor.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20220705150926_added_entity_constraints_Venta.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/20220705151226_modified_entity_DetalleVenta _added_column_cocheid.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220705151226_modified_entity_DetalleVenta_added_column_cocheid.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20220705155526_added_entity_constraints_DetalleVenta.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20220705172826_modified_entity_DetalleVenta_added_column_ventaid.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
