@@ -14,11 +14,11 @@ import { RouterModule } from '@angular/router';
         data: { pageTitle: 'concesionarioApp.cliente.home.title' },
         loadChildren: () => import('./cliente/cliente.module').then(m => m.ClienteModule),
       },
-      {
-        path: 'detalle-venta',
-        data: { pageTitle: 'concesionarioApp.detalleVenta.home.title' },
-        loadChildren: () => import('./detalle-venta/detalle-venta.module').then(m => m.DetalleVentaModule),
-      },
+      // {
+      //   path: 'detalle-venta',
+      //   data: { pageTitle: 'concesionarioApp.detalleVenta.home.title' },
+      //   loadChildren: () => import('./detalle-venta/detalle-venta.module').then(m => m.DetalleVentaModule),
+      // },
       {
         path: 'vendedor',
         data: { pageTitle: 'concesionarioApp.vendedor.home.title' },
