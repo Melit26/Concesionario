@@ -64,11 +64,11 @@
           </td>
           <td>{{ coche.marca }}</td>
           <td>{{ coche.modelo }}</td>
-          <td>{{ coche.kilometraje }}</td>
+          <td>{{ coche.kilometraje | number: '1.0-2' }} KM</td>
           <td>{{ coche.color }}</td>
           <td>{{ coche.tipoCoche }}</td>
           <td>{{ coche.estado }}</td>
-          <td>{{ coche.precio }}</td>
+          <td>{{ coche.precio | currency:'EUR':'€':'1.0-2'}}</td>
           <td class="text-end">
             <div class="btn-group">
               <button type="submit" [routerLink]="['/coche', coche.id, 'view']" class="btn btn-info btn-sm" data-cy="entityDetailsButton">
